@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .input-section, .preview-section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  
+  .input-section h1, .preview-section h2 {
+    color: #0073e6;
+    margin-bottom: 15px;
+  }
+  
+  .input-section p {
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  input[type="text"], input[type="email"], input[type="url"], textarea, input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #0073e6;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background-color: #005bb5;
+  }
+  
+  /* Preview Section */
+  #preview {
+    text-align: center;
+  }
+  
+  #preview img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  #previewName {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  #previewProfession {
+    font-size: 18px;
+    color: #0073e6;
+  }
+  
+  .contact-info p, .social-media-icons a {
+    color: #555;
+  }
+  
+  .social-media-icons a {
+    font-size: 1.5em;
+    margin: 0 5px;
+    color: #0073e6;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .social-media-icons a:hover {
+    color: #005bb5;
+  }
+  
+  /* Responsive Layout */
+  @media (min-width: 768px) {
+    .container {
+      flex-direction: row;
+      gap: 20px;
+    }
+    .input-section, .preview-section {
+      width: 48%;
+    }
+  }
+/* Existing CSS is included here for completeness */
+
+/* Skills, Projects, Work Experience, and Education */
+.skills, .projects, .experience, .education {
+    margin: 15px 0;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .project-title {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .project-description, .project-link {
+    display: block;
+    margin-top: 5px;
+    color: #333;
+  }
+  
+  button {
+    margin-top: 10px;
+  }
+    

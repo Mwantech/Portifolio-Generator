@@ -1,0 +1,159 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  header {
+    background: #444;
+    padding: 1rem 0;
+    color: #fff;
+  }
+  
+  header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  header nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+  }
+  
+  header nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .hero {
+    background: linear-gradient(to right, #3498db, #8e44ad);
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+  }
+  
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+  
+  .hero p {
+    margin-top: 1rem;
+  }
+  
+  .cta-button {
+    background: #f39c12;
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border: none;
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .cta-button:hover {
+    background: #e67e22;
+  }
+  
+  .features {
+    background: #f4f4f4;
+    padding: 3rem 0;
+    text-align: center;
+  }
+  
+  .features h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .feature-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+  
+  .card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card img {
+    width: 50px;
+    margin-bottom: 1rem;
+  }
+  
+  .testimonials {
+    padding: 3rem 0;
+    background: #3498db;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .testimonials h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .testimonial {
+    margin: 1.5rem 0;
+  }
+  
+  .cta {
+    padding: 3rem 0;
+    text-align: center;
+  }
+  
+  .cta h2 {
+    font-size: 2.5rem;
+  }
+  
+  .cta p {
+    margin-top: 1rem;
+  }
+  /* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .footer-content p {
+    margin: 0;
+  }
+  
+  .social-icons a {
+    color: #fff;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  
+  .social-icons a:hover {
+    color: #f39c12;
+  }
+  
+  /* Other sections remain the same */
+  
