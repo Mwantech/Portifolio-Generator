@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <h1 id="portfolioTitle">My Portfolio</h1>
+    </header>
+
+    <!-- Customization Panel Section -->
+    <section id="customizationPanel">
+        <h2>Customize Your Portfolio</h2>
+
+        <label for="fontSelect">Choose Font:</label>
+        <select id="fontSelect">
+            <option value="Arial, sans-serif">Arial</option>
+            <option value="'Courier New', Courier, monospace">Courier New</option>
+            <option value="'Times New Roman', Times, serif">Times New Roman</option>
+            <option value="Georgia, serif">Georgia</option>
+        </select>
+
+        <label for="bgColorPicker">Background Color:</label>
+        <input type="color" id="bgColorPicker" value="#ffffff">
+
+        <label for="textColorPicker">Text Color:</label>
+        <input type="color" id="textColorPicker" value="#000000">
+
+        <label for="headerColorPicker">Header Color:</label>
+        <input type="color" id="headerColorPicker" value="#4CAF50">
+
+        <button id="savePreferences">Save Preferences</button>
+        <button id="resetPreferences">Reset Preferences</button>
+    </section>
+
+    <main id="content">
+        <p id="portfolioText">Welcome to my customizable portfolio. Feel free to change the colors and fonts!</p>
+    </main>
+
+    <script>
+        // script.js
+
+// Get references to the select and color picker elements
+const fontSelect = document.getElementById('fontSelect');
+const bgColorPicker = document.getElementById('bgColorPicker');
+const textColorPicker = document.getElementById('textColorPicker');
+const headerColorPicker = document.getElementById('headerColorPicker');
+const saveButton = document.getElementById('savePreferences');
+const resetButton = document.getElementById('resetPreferences');
+
+// Load saved preferences on page load
+window.addEventListener('load', () => {
+    const savedFont = localStorage.getItem('font');
+    const savedBgColor = localStorage.getItem('bgColor');
+    const savedTextColor = localStorage.getItem('textColor');
+    const savedHeaderColor = localStorage.getItem('headerColor');
+
+    if (savedFont) document.body.style.fontFamily = savedFont;
+    if (savedBgColor) document.body.style.backgroundColor = savedBgColor;
+    if (savedTextColor) document.body.style.color = savedTextColor;
+    if (savedHeaderColor) document.querySelector('header').style.backgroundColor = savedHeaderColor;
+
+    // Set the UI controls to reflect saved values
+    fontSelect.value = savedFont || 'Arial, sans-serif';
+    bgColorPicker.value = savedBgColor || '#ffffff';
+    textColorPicker.value = savedTextColor || '#000000';
+    headerColorPicker.value = savedHeaderColor || '#4CAF50';
+});
+
+// Apply font change immediately
+fontSelect.addEventListener('change', () => {
+    document.body.style.fontFamily = fontSelect.value;
+});
+
+// Apply background color change immediately
+bgColorPicker.addEventListener('input', () => {
+    document.body.style.backgroundColor = bgColorPicker.value;
+});
+
+// Apply text color change immediately
+textColorPicker.addEventListener('input', () => {
+    document.body.style.color = textColorPicker.value;
+});
+
+// Apply header color change immediately
+headerColorPicker.addEventListener('input', () => {
+    document.querySelector('header').style.backgroundColor = headerColorPicker.value;
+});
+
+// Save preferences to localStorage
+saveButton.addEventListener('click', () => {
+    localStorage.setItem('font', fontSelect.value);
+    localStorage.setItem('bgColor', bgColorPicker.value);
+    localStorage.setItem('textColor', textColorPicker.value);
+    localStorage.setItem('headerColor', headerColorPicker.value);
+    alert('Preferences saved!');
+});
+
+// Reset preferences to default and clear localStorage
+resetButton.addEventListener('click', () => {
+    localStorage.clear();
+    location.reload(); // Reload to reset values to default
+});
+
+    </script>
+</body>
+</html>
