@@ -1,25 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Generator</title>
-  <link rel="stylesheet" href="../styles/mainpage.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  
-  <!-- JSZip and FileSaver.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.0/jszip.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
-  
-  <!-- html2canvas for Image Download -->
-  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-</head>
 
-<!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-EWNHM86SL7"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -29,12 +12,70 @@
   gtag('config', 'G-EWNHM86SL7');
 </script>
 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Portfolio Generator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.0/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <link rel="stylesheet" href="../styles/mainpage.css">
+</head>
+
 <body>
   <div class="container">
     <!-- Input Form -->
     <section class="input-section">
       <h1>Portfolio Generator</h1>
-      <p>Create your personalized portfolio and download it as HTML and CSS or an image.</p>
+      <p>Create your personalized portfolio with custom styling</p>
+
+      <!-- Style Customization Section -->
+      <div class="customization-section">
+        <h3>Customize Appearance</h3>
+        
+        <!-- Color Pickers -->
+        <div class="color-picker-group">
+          <label class="color-picker-label">
+            Primary Color:
+            <input type="color" id="primaryColor" value="#0073e6">
+          </label>
+          <label class="color-picker-label">
+            Secondary Color:
+            <input type="color" id="secondaryColor" value="#8e44ad">
+          </label>
+          <label class="color-picker-label">
+            Background Color:
+            <input type="color" id="backgroundColor" value="#f4f4f9">
+          </label>
+          <label class="color-picker-label">
+            Text Color:
+            <input type="color" id="textColor" value="#333333">
+          </label>
+          <label class="color-picker-label">
+            Image Border Color:
+            <input type="color" id="imageBorderColor" value="#0073e6">
+          </label>
+        </div>
+
+        <!-- Font Selection -->
+        <div class="style-options">
+          <select id="fontSelector" class="style-option">
+            <option value="Poppins">Poppins</option>
+            <option value="Roboto">Roboto</option>
+            <option value="Playfair Display">Playfair Display</option>
+            <option value="Montserrat">Montserrat</option>
+            <option value="Open Sans">Open Sans</option>
+          </select>
+
+          <!-- Image Border Width -->
+          <select id="imageBorderWidth" class="style-option">
+            <option value="2px">Thin Border</option>
+            <option value="4px" selected>Medium Border</option>
+            <option value="6px">Thick Border</option>
+          </select>
+        </div>
+      </div>
 
       <!-- Basic Info -->
       <label>Name: <input type="text" id="name" placeholder="Your Name"></label>
@@ -85,7 +126,7 @@
       <button onclick="downloadPortfolioImage()">Download Portfolio as Image</button>
     </section>
 
-    <!-- Live Preview -->
+    <!-- Preview Section -->
     <section class="preview-section">
       <h2>Live Preview</h2>
       <div id="preview">
